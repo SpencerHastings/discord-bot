@@ -1,7 +1,7 @@
 # Main Bot
 import discord
 from discord.ext import commands
-from lib.executor import run_program
+from mylib.executor import run_program
 
 TOKEN = 'NjA1ODM2MTM4NzIwMjY0MTky.XUJifA.iMHdYUlRmGVA9vaLnZau7X0wo-s'
 MASTER = 'spencer'
