@@ -1,7 +1,7 @@
 # Work with Python 3.6
 import discord
 
-TOKEN = 'NjA1ODM2MTM4NzIwMjY0MTky.XUCTGA.yyt_WAkCuRi9ANVcmnU3uG_J-I4'
+TOKEN = 'NjA1ODM2MTM4NzIwMjY0MTky.XUJifA.iMHdYUlRmGVA9vaLnZau7X0wo-s'
 
 class MyClient(discord.Client):
     async def on_ready(self):
