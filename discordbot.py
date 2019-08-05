@@ -36,6 +36,10 @@ async def ping(ctx):
     await ctx.send(random.choice(pingList))
 
 @bot.command()
+async def pong(ctx):
+    await ctx.send(random.choice('ping'))
+
+@bot.command()
 @commands.has_role(MASTER)
 async def stop(ctx):
     await ctx.send('Stopping')
