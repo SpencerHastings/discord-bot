@@ -9,7 +9,7 @@ from mylib.executor import run_program
 from mylib.misc import get_time
 
 TOKEN = 'NjA1ODM2MTM4NzIwMjY0MTky.XUJifA.iMHdYUlRmGVA9vaLnZau7X0wo-s'
-MASTER = 'spencer'
+MASTER = 'bot-master'
 DEFAULT = 'not spencer'
 TYPING = True
 ROLE_MONITOR = 'nothing'
