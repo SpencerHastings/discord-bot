@@ -135,15 +135,15 @@ async def on_member_update(before, after):
 
 async def background_task():
     await bot.wait_until_ready()
-    await asyncio.sleep(5)
+    await asyncio.sleep(2)
     while not bot.is_closed():
         try:
             logging.info("Background Task")
-            await asyncio.sleep(5)
+            await asyncio.sleep(2)
         except Exception as e:
             logging.error("Background Task" + str(e))
             print(str(e))
-            await asyncio.sleep(5)
+            await asyncio.sleep(2)
 
 bot.loop.create_task(background_task())
 bot.run(TOKEN)
