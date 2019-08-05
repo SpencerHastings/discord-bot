@@ -39,6 +39,7 @@ async def ping(ctx):
 @commands.has_role(MASTER)
 async def stop(ctx):
     await ctx.send('Stopping')
+    print('Stopping')
     await bot.logout()
 
 @bot.command()
@@ -97,6 +98,11 @@ async def roles(ctx):
                 output += "> " + role.name + "\n"
     output += "```"
     await ctx.send(output)
+
+@bot.event
+async def on_message(message):
+    ctx = await bot.get_context(message)
+    await bot.invoke(ctx)
 
 @bot.event
 async def on_member_join(member):

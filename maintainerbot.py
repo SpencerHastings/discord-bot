@@ -12,6 +12,8 @@ BOT_FILE = 'discordbot.py'
 
 bot = commands.Bot(command_prefix='%')
 
+childbot = None
+
 @bot.command()
 @commands.has_role(MASTER)
 async def stop(ctx):
@@ -22,16 +24,16 @@ async def stop(ctx):
 @commands.has_role(MASTER)
 async def restart(ctx):
     await ctx.send('!stop')
-    await asyncio.sleep(10)
-    cp = subprocess.run(['git pull'], shell=True, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    output = "```" + cp.stdout + "```"
-    await ctx.send(output)
-    subprocess.Popen(['python3', BOT_FILE])
+    #await asyncio.sleep(10)
+    #cp = subprocess.run(['git pull'], shell=True, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    #output = "```" + cp.stdout + "```"
+    #await ctx.send(output)
+    #childbot = subprocess.Popen(['python3', BOT_FILE])
 
 @bot.command()
 @commands.has_role(MASTER)
 async def start(ctx):
-    subprocess.Popen(['python3', BOT_FILE])
+    childbot = subprocess.Popen(['python3', BOT_FILE])
 
 
 bot.run(TOKEN)
