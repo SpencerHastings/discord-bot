@@ -10,6 +10,6 @@ def get_time():
 def get_bitcoin():
     request = "https://api.coindesk.com/v1/bpi/currentprice.json"
     response = requests.get(url = request)
-    data = response.json
+    data = response.json()
     price = data["bpi"]["USD"]["rate"]
     return price
