@@ -14,6 +14,10 @@ bot = commands.Bot(command_prefix='%')
 
 childbot = None
 
+@bot.event
+async def on_ready():
+    childbot = subprocess.Popen(['python3', BOT_FILE])
+    
 @bot.command()
 @commands.has_role(MASTER)
 async def stop(ctx):
