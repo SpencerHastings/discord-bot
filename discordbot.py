@@ -7,6 +7,7 @@ import time
 from discord.ext import commands
 from mylib.executor import run_program
 from mylib.misc import get_time
+from mylib.misc import get_bitcoin
 
 TOKEN = 'NjA1ODM2MTM4NzIwMjY0MTky.XUJifA.iMHdYUlRmGVA9vaLnZau7X0wo-s'
 MASTER = 'bot-master'
@@ -38,6 +39,10 @@ async def ping(ctx):
 @bot.command()
 async def pong(ctx):
     await ctx.send('ping')
+
+@bot.command()
+async def bitcoin(ctx):
+    await ctx.send('$' + get_bitcoin())
 
 @bot.command()
 @commands.has_role(MASTER)
