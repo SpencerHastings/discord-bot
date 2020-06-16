@@ -5,12 +5,14 @@ import logging
 import asyncio
 import subprocess
 import os
+from mylib.keys import maintainerKey
+from config import maintainer_master, m_prefix
 
-TOKEN = 'NjA3NzQzNDkzMjQyMzU1NzEy.XUeDSA.sCU34yUWjOnnDrpxyNcYdWsE0TI'
-MASTER = 'spencer'
+TOKEN = maintainerKey
+MASTER = maintainer_master
 BOT_FILE = 'discordbot.py'
 
-bot = commands.Bot(command_prefix='%')
+bot = commands.Bot(command_prefix=m_prefix)
 
 childbot = None
 

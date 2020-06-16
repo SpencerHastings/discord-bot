@@ -105,3 +105,6 @@ venv.bak/
 
 #My Stuff
 mylib/keys.py
+config.py
+config.py.testing
+config.py.release

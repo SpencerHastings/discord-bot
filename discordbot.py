@@ -8,15 +8,18 @@ from discord.ext import commands
 from mylib.executor import run_program
 from mylib.misc import get_time
 from mylib.misc import get_bitcoin
+from mylib.keys import botKey
+from config import prefix, bot_master, default_role, role_monitor, typing
 
-TOKEN = 'NjA1ODM2MTM4NzIwMjY0MTky.XUJifA.iMHdYUlRmGVA9vaLnZau7X0wo-s'
-MASTER = 'bot-master'
-DEFAULT = 'not spencer'
-TYPING = True
-ROLE_MONITOR = 'nothing'
+TOKEN = botKey
+MASTER = bot_master
+DEFAULT = default_role
+TYPING = typing
+ROLE_MONITOR = role_monitor
+
 FIRST_START = True
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix=prefix)
 
 pingList = [
     "I'm sorry, Dave. I'm afraid I can't do that."

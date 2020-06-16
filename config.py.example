@@ -1,0 +1,32 @@
+# ----------------
+# GENERAL SETTINGS
+# ----------------
+
+# bot prefix
+prefix = '!'
+
+# maintainer bot prefix
+m_prefix = '%'
+
+# -------------
+# ROLE SETTINGS
+# -------------
+
+# has permissions to send maintainer bot admin commands
+maintainer_master = 'spencer'
+
+# has permissions to send bot admin commands
+bot_master = 'bot-master'
+
+# standard server user role
+default_role = 'not spencer'
+
+# feature to monitor add and remove of a role
+role_monitor = 'nothing'
+
+# ---------------
+# FEATURE TOGGLES
+# ---------------
+
+# bot responds when people start typing
+typing = True
