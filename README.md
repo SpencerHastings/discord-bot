@@ -10,7 +10,7 @@ If you want to use this bot for some reason:
 1. Install Python 3 and Dependencies
   * discord.py
   * asyncio
-1. If you want to use the maintainer bot launch that python file, otherwise use the discord bot python file
+If you want to use the maintainer bot launch that python file, otherwise use the discord bot python file
 
 ## maintainer bot
 
